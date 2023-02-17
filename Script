@@ -1,0 +1,43 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Doors Script Hub", "Ocean")
+
+if game.PlaceId == 6516141723 then
+
+----------------- MAIN -------------
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Another Scripts")
+local PlayerSection = Main:NewSection("Player")
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Credits")
+local AnotherScriptsSection = Credits:NewSection("Another Credits")
+
+
+MainSection:NewButton("Infinity Yield", "idk", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+MainSection:NewButton("ByPass AntiCheat", "a", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))()
+end)
+
+PlayerSection:NewToggle("Walkspeed", "what", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 46
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+PlayerSection:NewButton("NoClip / Fly", "NOCLIP", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/rjk0720/Roblox-Commands/master/Command%20LocalScripts/NoClip.lua'))()
+end)
+
+MainSection:NewButton("Vinixiu's Script", "a", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+CreditsSection:NewLabel("Made by: SergioPlayYou#8419")
+CreditsSection:NewLabel("Made By: Visual Studio Code")
+AnotherScriptsSection:NewLabel("Infinite Yield: idk")
+AnotherScriptsSection:NewLabel("ByPass Anticheat: idk")
+AnotherScriptsSection:NewLabel("Vinixiu's Script: Vinixius")
